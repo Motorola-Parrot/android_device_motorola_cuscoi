@@ -307,15 +307,6 @@ vendor/firmware/cps4038.bin
 vendor/etc/display/qdcm_calib_data_mipi_mot_vid_csot_667_1080p_dsc_144hz_fhd.json
 vendor/etc/display/qdcm_calib_data_mipi_mot_vid_tm_667_1080p_dsc_144hz_fhd.json
 
-# ESE Powermanagement
-vendor/bin/hw/vendor.qti.esepowermanager@1.1-service
-vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc
-vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so
-vendor/lib64/libesepmconfig.so
-vendor/lib64/libesesbprovision.so
-vendor/lib64/vendor.qti.esepowermanager@1.0.so
-vendor/lib64/vendor.qti.esepowermanager@1.1.so
-
 # Fingerprint
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-goodixservice
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-goodixservice.rc
