@@ -22,6 +22,11 @@ include device/motorola/sm7435-common/BoardConfigCommon.mk
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := cuscoi
 
+# Manifest
+ODM_MANIFEST_SKUS += b d
+ODM_MANIFEST_B_FILES := $(DEVICE_PATH)/sku/manifest_b.xml
+ODM_MANIFEST_D_FILES := $(DEVICE_PATH)/sku/manifest_d.xml
+
 # Partitions
 BOARD_MOT_DP_GROUP_SIZE := 8313110528 # (BOARD_SUPER_PARTITION_SIZE - 4MB)
 BOARD_SUPER_PARTITION_SIZE := 8317304832
