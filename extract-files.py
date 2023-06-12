@@ -33,6 +33,7 @@ module = ExtractUtilsModule(
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
+    add_generated_carriersettings=True,
 )
 
 if __name__ == '__main__':
