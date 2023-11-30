@@ -4,6 +4,12 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+from extract_utils.extract import extract_fns_user_type
+from extract_utils.extract_star import (
+    extract_star_firmware,
+    star_firmware_regex,
+)
+
 from extract_utils.fixups_blob import (
     blob_fixup,
     blob_fixups_user_type,
@@ -39,12 +45,18 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('android.hardware.graphics.allocator-V1-ndk.so', 'android.hardware.graphics.allocator-V2-ndk.so')
 }
 
+extract_fns: extract_fns_user_type = {
+    star_firmware_regex: extract_star_firmware,
+}
+
 module = ExtractUtilsModule(
     'cuscoi',
     'motorola',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
+    extract_fns=extract_fns,
+    add_firmware_proprietary_file=True,
     add_generated_carriersettings=True,
 )
 
