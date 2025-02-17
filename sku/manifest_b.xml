@@ -25,7 +25,6 @@
     </hal>
     <hal format="aidl" override="true">
         <name>vendor.qti.hardware.data.connectionfactory</name>
-        <transport>hwbinder</transport>
         <fqname>IFactory/slot0</fqname>
     </hal>
     <hal format="hidl" override="true">
@@ -44,11 +43,6 @@
     </hal>
     <hal format="aidl" override="true">
         <name>vendor.qti.hardware.radio.ims</name>
-        <version>7</version>
-        <interface>
-            <name>IImsRadio</name>
-            <instance>imsradio0</instance>
-        </interface>
         <fqname>IImsRadio/imsradio0</fqname>
     </hal>
     <hal format="hidl" override="true">
