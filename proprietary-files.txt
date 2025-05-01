@@ -520,3 +520,7 @@ vendor/firmware/tm_goodix_cfg_group.bin:recovery/root/vendor/firmware/tm_goodix_
 vendor/etc/vintf/manifest/com.motorola.hardware.camera.postprocess-impl.xml
 vendor/etc/vintf/manifest/manifest_IMoto_Fingerprint.xml 
 vendor/etc/vintf/manifest/vendor.qti.camera.provider.xml
+
+# Properties (SKU)
+product/etc/motorola/props/hardware.sku.XT2531-1.prop:product/etc/hardware.sku.XT2531-1.prop
+product/etc/motorola/props/hardware.sku.XT2531-2.prop:product/etc/hardware.sku.XT2531-2.prop
