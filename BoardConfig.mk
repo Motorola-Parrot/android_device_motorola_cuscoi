@@ -29,6 +29,9 @@ TARGET_KERNEL_CONFIG += vendor/lineage_cuscoi.config
 #BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load.ramdisk))
 #BOOT_KERNEL_MODULES := $(BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD)
 
+# Fix prebuilt build
+ $(shell mkdir -p $(OUT_DIR)/target/product/cuscoi/obj/KERNEL_OBJ/usr)
+
 # Prebuilt Kernel
 TARGET_FORCE_PREBUILT_KERNEL := true
 TARGET_NO_KERNEL_OVERRIDE := true
