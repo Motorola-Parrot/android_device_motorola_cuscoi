@@ -22,8 +22,6 @@ vendor/etc/acdbdata/parrot_qrd/QRD_parrot_workspaceFileXml.qwsp
 vendor/firmware/fs19xx.fsm
 
 # Camera
-system_ext/lib/vendor.qti.hardware.camera.postproc@1.0.so
-system_ext/lib/vendor.qti.hardware.seccam@1.0.so
 system_ext/lib64/vendor.qti.hardware.camera.postproc@1.0.so
 system_ext/lib64/vendor.qti.hardware.seccam@1.0.so
 vendor/bin/hw/motorola.hardware.camera.imgtuner.aidl-service
@@ -41,11 +39,17 @@ vendor/lib64/com.qti.chiusecaseselector.so
 vendor/lib64/camera.device@1.0-impl.so
 vendor/lib64/camx.device@3.2-impl.so
 vendor/lib64/camx.device@3.3-impl.so
+vendor/lib64/camx.device@3.4-ext-impl.so
 vendor/lib64/camx.device@3.4-impl.so
+vendor/lib64/camx.device@3.5-ext-impl.so
 vendor/lib64/camx.device@3.5-impl.so
+vendor/lib64/camx.device@3.6-ext-impl.so
 vendor/lib64/camx.device@3.6-impl.so
 vendor/lib64/camx.device@3.7-impl.so
+vendor/lib64/camx.provider@2.4-external.so
+vendor/lib64/camx.provider@2.4-impl.so
 vendor/lib64/camx.provider@2.4-legacy.so
+vendor/lib64/camx.provider@2.5-external.so
 vendor/lib64/camx.provider@2.5-legacy.so
 vendor/lib64/camx.provider@2.6-legacy.so
 vendor/lib64/camx.provider@2.7-legacy.so
@@ -57,6 +61,7 @@ vendor/lib64/libBSTSWAD.so
 vendor/lib64/libarcsoft_qnnhtp.so
 vendor/lib64/libarcsoft_super_night_raw.so
 vendor/lib64/libbitmlenginev2.so
+vendor/lib64/libcamerapostproc.so
 vendor/lib64/libcamxcommonutils.so
 vendor/lib64/libcamxexternalformatutils.so
 vendor/lib64/libcamxfacialfeatures.so
