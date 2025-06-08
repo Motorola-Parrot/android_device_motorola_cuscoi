@@ -50,6 +50,7 @@ TARGET_USES_ST_NFC := true
 
 # Overlays
 PRODUCT_PACKAGES += \
+    ApertureOverlay \
     FrameworksResDevice \
     LineageSystemUIDevice \
     SettingsResDevice \
