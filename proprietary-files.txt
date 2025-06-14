@@ -39,11 +39,8 @@ vendor/firmware/fs19xx.fsm
 # Camera
 system_ext/lib64/vendor.qti.hardware.camera.postproc@1.0.so
 system_ext/lib64/vendor.qti.hardware.seccam@1.0.so
-vendor/bin/hw/motorola.hardware.camera.imgtuner.aidl-service
 vendor/bin/hw/vendor.qti.camera.provider@2.7-service_64
-vendor/etc/init/motorola.hardware.camera.imgtuner.aidl-service.rc
 vendor/etc/init/vendor.qti.camera.provider@2.7-service_64.rc
-vendor/etc/vintf/manifest/motorola.hardware.camera.imgtuner.aidl.xml
 vendor/lib64/camera/fdconfigpreview.bin
 vendor/lib64/camera/fdconfigpreviewlite.bin
 vendor/lib64/camera/fdconfigvideo.bin
@@ -114,7 +111,6 @@ vendor/lib64/libsynx.so
 vendor/lib64/libthreadutils.so
 vendor/lib64/libundistort_impl.so
 vendor/lib64/libvidhance.so
-vendor/lib64/motorola.hardware.camera.imgtuner.aidl-V1-ndk_platform.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
 
 
