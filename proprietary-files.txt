@@ -93,8 +93,6 @@ vendor/lib64/libcamxswprocessalgo.so
 vendor/lib64/libcamxtintlessalgo.so
 vendor/lib64/libchilog.so
 vendor/lib64/libcom.qti.chinodeutils.so
-vendor/lib64/libcv_common.so
-vendor/lib64/libcvp2_1.so
 vendor/lib64/libhdr10plus.so
 vendor/lib64/libhdr_impl.so
 vendor/lib64/libmmcamera_bestats.so
