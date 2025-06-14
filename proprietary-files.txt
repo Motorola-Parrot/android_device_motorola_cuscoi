@@ -95,7 +95,6 @@ vendor/lib64/libchilog.so
 vendor/lib64/libcom.qti.chinodeutils.so
 vendor/lib64/libcv_common.so
 vendor/lib64/libcvp2_1.so
-vendor/lib64/libeva.so
 vendor/lib64/libhdr10plus.so
 vendor/lib64/libhdr_impl.so
 vendor/lib64/libmmcamera_bestats.so
@@ -113,11 +112,6 @@ vendor/lib64/libmpbase.so
 vendor/lib64/libopencv.so
 vendor/lib64/libopencv3a.so
 vendor/lib64/libos.so
-vendor/lib64/libscveCommon.so
-vendor/lib64/libscveCommon_stub.so
-vendor/lib64/libscveObjectSegmentation.so
-vendor/lib64/libscveObjectTracker.so
-vendor/lib64/libscveObjectTracker_stub.so
 vendor/lib64/libsynx.so
 vendor/lib64/libthreadutils.so
 vendor/lib64/libundistort_impl.so
