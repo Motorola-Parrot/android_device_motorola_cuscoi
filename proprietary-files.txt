@@ -228,10 +228,6 @@ vendor/lib64/com.qti.feature2.statsregeneration.so
 vendor/lib64/com.qti.feature2.stub.so
 vendor/lib64/com.qti.feature2.swmf.so
 
-# Camera - ICP
-vendor/firmware/CAMERA_ICP.elf
-vendor/firmware/CAMERA_ICP_170.elf
-
 # Camera - sensor
 vendor/lib64/camera/com.qti.sensor.mot_gc13a2.so
 vendor/lib64/camera/com.qti.sensor.mot_hi1336.so
@@ -298,14 +294,8 @@ vendor/etc/st21nfc_conf_ss.txt
 vendor/firmware/st21nfc_fw.bin
 vendor/firmware/st21nfc_fw7.bin
 
-# OEM
-vendor/etc/vhw.xml
-
 # SAR firmware
 vendor/firmware/aw963xx_reg_0.bin
-
-# Sensors
-vendor/lib64/sensors.moto.so
 
 # Sensor - configs
 vendor/etc/sensors/config/icm4x6xx_0.json
