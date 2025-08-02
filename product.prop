@@ -1,5 +1,6 @@
 # Google
 ro.opa.device_model_id=motorola-cuscoi
+ro.opa.eligible_device=true
 
 # Motorola
 ro.mot.build.customerid=global
