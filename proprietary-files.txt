@@ -33,6 +33,11 @@ vendor/lib/rfsa/adsp/libSnpeDspV66Skel.so
 vendor/lib/rfsa/adsp/libSnpeHtpV73Skel.so  
 vendor/lib/rfsa/adsp/libarc_htp_driver_skel.so
 
+# Audio - aualgo config
+vendor/etc/aualgo/aualgo_comp_azpp.conf
+vendor/lib64/libaualgo_azp_component.so
+vendor/lib64/libaualgo_azp_wrapper.so
+
 # Audio firmware
 vendor/firmware/fs19xx.fsm
 
