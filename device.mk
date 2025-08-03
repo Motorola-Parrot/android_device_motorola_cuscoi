@@ -39,8 +39,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/sku_parrot/resourcemanager_parrot_qrd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_parrot/resourcemanager_parrot_qrd.xml
 
 # Fingerprint
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.cuscoi
+#PRODUCT_PACKAGES += \
+#    android.hardware.biometrics.fingerprint@2.3-service.cuscoi
 
 # Init
 $(foreach f,$(wildcard $(LOCAL_PATH)/rootdir/etc/init/hw/*.rc),\
