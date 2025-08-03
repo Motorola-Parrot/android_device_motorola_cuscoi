@@ -92,18 +92,18 @@
          overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessDisplayValuesNits">
         <item>3</item>
-        <item>7</item>
-        <item>10</item>
-        <item>24</item>
-        <item>64</item>
-        <item>82</item>
-        <item>90</item>
-        <item>105</item>
-        <item>192</item>
-        <item>412</item>
-        <item>500</item>
-        <item>700</item>
-        <item>1000</item>
+        <item>8</item>
+        <item>15</item>
+        <item>30</item>
+        <item>55</item>
+        <item>85</item>
+        <item>120</item>
+        <item>160</item>
+        <item>250</item>
+        <item>400</item>
+        <item>600</item>
+        <item>850</item>
+        <item>1050</item>
         <item>1200</item>
     </integer-array>
 
@@ -137,18 +137,18 @@
          This array should be equal in size to config_screenBrightnessBacklight -->
     <integer-array name="config_screenBrightnessNits">
         <item>3</item>
-        <item>7</item>
-        <item>10</item>
-        <item>24</item>
-        <item>64</item>
-        <item>82</item>
-        <item>90</item>
-        <item>105</item>
-        <item>192</item>
-        <item>412</item>
-        <item>500</item>
-        <item>700</item>
-        <item>1000</item>
+        <item>8</item>
+        <item>15</item>
+        <item>30</item>
+        <item>55</item>
+        <item>85</item>
+        <item>120</item>
+        <item>160</item>
+        <item>250</item>
+        <item>400</item>
+        <item>600</item>
+        <item>850</item>
+        <item>1050</item>
         <item>1200</item>
     </integer-array>
 
