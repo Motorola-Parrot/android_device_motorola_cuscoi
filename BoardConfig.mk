@@ -4,11 +4,9 @@
 #
 
 DEVICE_PATH := device/motorola/cuscoi
-DLKM_MODULES_PATH := $(DEVICE_PATH)-kernel/vendor-modules
-RAMDISK_MODULES_PATH := $(DEVICE_PATH)-kernel/ramdisk-modules
 
-# Inherit from motorola sm6450-common
-include device/motorola/sm6450-common/BoardConfigCommon.mk
+# Inherit from motorola sm7435-common
+include device/motorola/sm7435-common/BoardConfigCommon.mk
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := cuscoi
@@ -30,31 +28,8 @@ BOARD_KERNEL_CMDLINE += androidboot.hab.product=cuscoi
 #BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load.ramdisk))
 #BOOT_KERNEL_MODULES := $(BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD)
 
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(RAMDISK_MODULES_PATH)/*.ko)
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(patsubst %,$(RAMDISK_MODULES_PATH)/%,$(shell cat $(RAMDISK_MODULES_PATH)/modules.load))
-BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD  := $(patsubst %,$(RAMDISK_MODULES_PATH)/%,$(shell cat $(RAMDISK_MODULES_PATH)/modules.load.recovery))
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(RAMDISK_MODULES_PATH)/modules.blocklist
-
-BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(DLKM_MODULES_PATH)/*.ko)
-BOARD_VENDOR_KERNEL_MODULES_LOAD := $(patsubst %,$(DLKM_MODULES_PATH)/%,$(shell cat $(DLKM_MODULES_PATH)/modules.load))
-BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(DLKM_MODULES_PATH)/modules.blocklist
-
 # Fix prebuilt build
  $(shell mkdir -p $(OUT_DIR)/target/product/cuscoi/obj/KERNEL_OBJ/usr)
-
-# Prebuilt Kernel
-TARGET_FORCE_PREBUILT_KERNEL := true
-TARGET_NO_KERNEL_OVERRIDE := true
-TARGET_NO_KERNEL := false
-BOARD_KERNEL_BINARIES := kernel
-TARGET_KERNEL_VERSION := 5.10
-TARGET_KERNEL_SOURCE := $(DEVICE_PATH)-kernel/kernel-headers
-TARGET_PREBUILT_DTB := $(DEVICE_PATH)-kernel/dtb.img
-BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/dtbo.img
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)-kernel/kernel
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)-kernel/dtb.img:$(TARGET_COPY_OUT)/dtb.img \
-    $(DEVICE_PATH)-kernel/kernel:kernel
 
 # Partitions
 BOARD_MOT_DP_GROUP_SIZE := 8313110528 # ( BOARD_SUPER_PARTITION_SIZE - 4MB )
