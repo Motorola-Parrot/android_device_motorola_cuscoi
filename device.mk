@@ -54,10 +54,10 @@ PRODUCT_SHIPPING_API_LEVEL := 34
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 
 # Wi-Fi
-TARGET_WIFI_VARIANTS := qca6750
+TARGET_WIFI_VARIANTS := adrastea
 
 # Inherit from motorola sm7435-common
 $(call inherit-product, device/motorola/sm7435-common/common.mk)
 
 # Inherit from vendor blobs
-$(call inherit-product, vendor/motorola/paros/paros-vendor.mk)
+$(call inherit-product, vendor/motorola/cuscoi/cuscoi-vendor.mk)
