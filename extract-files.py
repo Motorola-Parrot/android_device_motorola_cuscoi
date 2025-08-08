@@ -42,7 +42,7 @@ extract_fns: extract_fns_user_type = {
 }
 
 module = ExtractUtilsModule(
-    'paros',
+    'cuscoi',
     'motorola',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,

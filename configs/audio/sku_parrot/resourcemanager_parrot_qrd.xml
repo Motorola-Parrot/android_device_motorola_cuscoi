@@ -109,11 +109,6 @@
                 </custom-config>
             </usecase>
             <usecase>
-                <name>PAL_STREAM_RAW</name>
-                <channels>2</channels>
-                <snd_device_name>handset-dual-mic</snd_device_name>
-            </usecase>
-            <usecase>
                 <name>PAL_STREAM_VOIP_TX</name>
                 <priority>2</priority>
                 <sidetone_mode>HW</sidetone_mode>
@@ -134,6 +129,26 @@
             </usecase>
             <usecase>
                 <name>PAL_STREAM_ULTRA_LOW_LATENCY</name>
+            </usecase>
+            <usecase>
+                <name>PAL_STREAM_RAW</name>
+                <snd_device_name>unprocessed-mic</snd_device_name>
+                <custom-config key="unprocessed-hdr-mic-landscape">
+                    <channels>4</channels>
+                    <snd_device_name>unprocessed-hdr-mic-landscape</snd_device_name>
+                </custom-config>
+                <custom-config key="unprocessed-hdr-mic-portrait">
+                    <channels>4</channels>
+                    <snd_device_name>unprocessed-hdr-mic-portrait</snd_device_name>
+                </custom-config>
+                <custom-config key="unprocessed-hdr-mic-inverted-landscape">
+                    <channels>4</channels>
+                    <snd_device_name>unprocessed-hdr-mic-inverted-landscape</snd_device_name>
+                </custom-config>
+                <custom-config key="unprocessed-hdr-mic-inverted-portrait">
+                    <channels>4</channels>
+                    <snd_device_name>unprocessed-hdr-mic-inverted-portrait</snd_device_name>
+                </custom-config>
             </usecase>
             <ec_rx_device>
                 <id>PAL_DEVICE_OUT_HANDSET</id>
@@ -167,21 +182,16 @@
                 </custom-config>
             </usecase>
             <usecase>
-                <name>PAL_STREAM_RAW</name>
-                <channels>2</channels>
-                <snd_device_name>handset-dual-mic</snd_device_name>
-            </usecase>
-            <usecase>
                 <name>PAL_STREAM_VOIP_TX</name>
                 <priority>2</priority>
                 <channels>1</channels>
-                <snd_device_name>speaker-mic1</snd_device_name>
+                <snd_device_name>speaker-mic</snd_device_name>
             </usecase>
             <usecase>
                 <name>PAL_STREAM_VOICE_CALL</name>
                 <priority>1</priority>
                 <channels>1</channels>
-                <snd_device_name>speaker-mic1</snd_device_name>
+                <snd_device_name>speaker-mic</snd_device_name>
                 <sidetone_mode>OFF</sidetone_mode>
             </usecase>
             <usecase>
@@ -343,12 +353,13 @@
         </in-device>
         <in-device>
             <id>PAL_DEVICE_IN_VI_FEEDBACK</id>
-            <back_end_name>CODEC_DMA-LPAIF_RXTX-TX-1</back_end_name>
+            <back_end_name>MI2S-LPAIF_VA-TX-PRIMARY</back_end_name>
             <max_channels>2</max_channels>
             <channels>2</channels>
             <samplerate>48000</samplerate>
             <bit_width>32</bit_width>
             <snd_device_name>vi-feedback</snd_device_name>
+	    <supported_bit_format>PAL_AUDIO_FMT_PCM_S32_LE</supported_bit_format>
         </in-device>
         <in-device>
             <id>PAL_DEVICE_IN_BLUETOOTH_A2DP</id>
@@ -383,29 +394,29 @@
         </in-device>
         <in-device>
             <id>PAL_DEVICE_IN_EXT_EC_REF</id>
-            <back_end_name>CODEC_DMA-LPAIF_RXTX-TX-0</back_end_name>
+            <back_end_name>MI2S-LPAIF_VA-TX-PRIMARY</back_end_name>
             <snd_device_name>ext_ec_ref_tx</snd_device_name>
             <max_channels>2</max_channels>
             <channels>2</channels>
             <samplerate>48000</samplerate>
-            <bit_width>16</bit_width>
+            <bit_width>32</bit_width>
         </in-device>
         <out-device>
             <id>PAL_DEVICE_NONE</id>
-            <back_end_name>CODEC_DMA-LPAIF_RXTX-RX-0</back_end_name>
+            <back_end_name>MI2S-LPAIF_VA-RX-PRIMARY</back_end_name>
             <max_channels>2</max_channels>
             <channels>1</channels>
             <snd_device_name>none</snd_device_name>
             <samplerate>48000</samplerate>
-            <bit_width>16</bit_width>
+            <bit_width>32</bit_width>
         </out-device>
         <out-device>
             <id>PAL_DEVICE_OUT_SPEAKER</id>
-            <back_end_name>CODEC_DMA-LPAIF_RXTX-RX-1</back_end_name>
+            <back_end_name>MI2S-LPAIF_VA-RX-PRIMARY</back_end_name>
             <max_channels>2</max_channels>
             <channels>2</channels>
             <samplerate>48000</samplerate>
-            <bit_width>16</bit_width>
+            <bit_width>32</bit_width>
             <snd_device_name>speaker</snd_device_name>
             <speaker_protection_enabled>1</speaker_protection_enabled>
             <!-- To enable external EC reference the flag extec_ref_enabled must be added as 1 -->
@@ -415,7 +426,7 @@
             <!--specify the supported bit format on speaker end point -->
             <!--this should be in the form of pal_audio_fmt_id-->
             <!--e.g <supported_bit_format >PAL_AUDIO_FMT_PCM_S24_LE</supported_bit_format>-->
-            <supported_bit_format>PAL_AUDIO_FMT_PCM_S16_LE</supported_bit_format>
+            <supported_bit_format>PAL_AUDIO_FMT_PCM_S32_LE</supported_bit_format>
             <!-- RAS should be enabled with speaker protection always -->
             <ras_enabled>0</ras_enabled>
             <!-- Flag to specify speaker in case Voice call is switched from
@@ -447,13 +458,13 @@
         </out-device>
         <out-device>
             <id>PAL_DEVICE_OUT_HANDSET</id>
-            <back_end_name>CODEC_DMA-LPAIF_RXTX-RX-0</back_end_name>
+            <back_end_name>MI2S-LPAIF_VA-RX-PRIMARY</back_end_name>
             <max_channels>2</max_channels>
             <channels>1</channels>
             <!-- To enable external EC reference the flag extec_ref_enabled must be added as 1 -->
             <ext_ec_ref_enabled>0</ext_ec_ref_enabled>
             <samplerate>48000</samplerate>
-            <bit_width>16</bit_width>
+            <bit_width>32</bit_width>
             <fractional_sr>0</fractional_sr>
             <snd_device_name>handset</snd_device_name>
             <handset_protection_enabled>0</handset_protection_enabled>
@@ -742,12 +753,12 @@
         </out-device>
         <out-device>
             <id>PAL_DEVICE_OUT_ULTRASOUND</id>
-            <back_end_name>CODEC_DMA-LPAIF_RXTX-RX-0</back_end_name>
+            <back_end_name>MI2S-LPAIF_VA-RX-PRIMARY</back_end_name>
             <max_channels>2</max_channels>
             <channels>1</channels>
             <snd_device_name>ultrasound-handset</snd_device_name>
             <samplerate>96000</samplerate>
-            <bit_width>16</bit_width>
+            <bit_width>32</bit_width>
         </out-device>
     </device_profile>
     <in_streams>
