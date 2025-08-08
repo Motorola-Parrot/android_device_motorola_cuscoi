@@ -18,16 +18,21 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from paros device
-$(call inherit-product, device/motorola/paros/device.mk)
+# Inherit from cuscoi device
+$(call inherit-product, device/motorola/cuscoi/device.mk)
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_paros
-PRODUCT_DEVICE := paros
+PRODUCT_NAME := lineage_cuscoi
+PRODUCT_DEVICE := cuscoi
 PRODUCT_MANUFACTURER := motorola
 PRODUCT_BRAND := motorola
-PRODUCT_MODEL := motorola moto g75
+PRODUCT_MODEL := motorola edge 50 fusion
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BuildDesc="cuscoi_g-user 15 V1UUI35M.15-41-6 b33d6 release-keys" \
+    BuildFingerprint=motorola/cuscoi_g/cuscoi:15/V1UUI35M.15-41-6/b33d6:user/release-keys \
+    DeviceProduct=cuscoi_g

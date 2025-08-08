@@ -42,13 +42,13 @@ extract_fns: extract_fns_user_type = {
 }
 
 module = ExtractUtilsModule(
-    'paros',
+    'cuscoi',
     'motorola',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
     add_generated_carriersettings=True,
-    add_firmware_proprietary_file=True,
+    add_firmware_proprietary_file=False,
     extract_fns=extract_fns,
 )
 
