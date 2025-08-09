@@ -43,6 +43,14 @@ $(foreach f,$(wildcard $(LOCAL_PATH)/rootdir/bin/*.sh),\
 # NFC
 TARGET_USES_ST_NFC := true
 
+# Overlay
+PRODUCT_PACKAGES += \
+    FrameworksResDevice \
+    LineageSystemUIDevice \
+    SettingsResDevice \
+    SystemUIResDevice \
+    WifiResDevice
+
 # Screen
 TARGET_SCREEN_DENSITY := 400
 
