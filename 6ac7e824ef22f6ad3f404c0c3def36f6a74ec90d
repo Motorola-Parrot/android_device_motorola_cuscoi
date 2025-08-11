@@ -51,6 +51,24 @@
       "parentUuid": "e18b5e10_219bdae8",
       "revId": "6ac7e824ef22f6ad3f404c0c3def36f6a74ec90d",
       "serverId": "10b47cd0-ef45-46be-b9f3-8729e8c6cfd0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "319f6333_fab0bcc8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2025-08-11T08:57:30Z",
+      "side": 1,
+      "message": "no, following stock, transport is not there\nhttps://dumps.tadiphone.dev/dumps/motorola/cuscoi/-/blob/user-14-U2UUIS34.40-108-3-1-aca44f-release-keys/vendor/odm/etc/vintf/manifest_b.xml?ref_type\u003dheads#L46",
+      "parentUuid": "c34a95ff_df1ebceb",
+      "revId": "6ac7e824ef22f6ad3f404c0c3def36f6a74ec90d",
+      "serverId": "10b47cd0-ef45-46be-b9f3-8729e8c6cfd0"
     }
   ]
 }
