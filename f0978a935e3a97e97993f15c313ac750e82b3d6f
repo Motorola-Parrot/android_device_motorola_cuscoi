@@ -16,6 +16,24 @@
       "message": "Comment removed by: Nikita Savchenko; Reason: .",
       "revId": "f0978a935e3a97e97993f15c313ac750e82b3d6f",
       "serverId": "10b47cd0-ef45-46be-b9f3-8729e8c6cfd0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "996d85a5_7fecebe7",
+        "filename": "sku/manifest_b.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2025-08-11T08:58:42Z",
+      "side": 0,
+      "message": "https://dumps.tadiphone.dev/dumps/motorola/cuscoi/-/blob/user-14-U2UUIS34.40-108-3-1-aca44f-release-keys/vendor/odm/etc/vintf/manifest_b.xml?ref_type\u003dheads#L46",
+      "parentUuid": "890955de_6e83dbfd",
+      "revId": "f0978a935e3a97e97993f15c313ac750e82b3d6f",
+      "serverId": "10b47cd0-ef45-46be-b9f3-8729e8c6cfd0"
     }
   ]
 }
