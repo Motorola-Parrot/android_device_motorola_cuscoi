@@ -304,6 +304,7 @@ vendor/lib64/camera/com.qti.tuned.mot_cusco_s5kjd1.bin
 vendor/firmware/cps4038.bin
 
 # Display calibration data
+vendor/etc/display/FOSSConfig.xml
 vendor/etc/display/qdcm_calib_data_mipi_mot_vid_csot_667_1080p_dsc_144hz_fhd.json
 vendor/etc/display/qdcm_calib_data_mipi_mot_vid_tm_667_1080p_dsc_144hz_fhd.json
 
