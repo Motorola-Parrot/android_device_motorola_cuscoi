@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b5eeaa69_8f598da5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2025-08-14T14:55:10Z",
+      "side": 1,
+      "message": "Move to sm7435-common tree\nhttps://github.com/LineageOS/android_device_xiaomi_sm8450-common/commit/b73b5581fbde1096cce4ab388552a79449c03e8a",
+      "revId": "b2fd3ec84ff0b1420e12998d94616f88f7f5b46b",
+      "serverId": "10b47cd0-ef45-46be-b9f3-8729e8c6cfd0"
+    }
+  ]
+}
