@@ -16,6 +16,24 @@
       "message": "Is this needed for fsm audio devices?",
       "revId": "bd2605917b71501ed6d2afd4783071d6bd28fae7",
       "serverId": "10b47cd0-ef45-46be-b9f3-8729e8c6cfd0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "228556ed_4012c420",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2025-08-14T15:28:31Z",
+      "side": 1,
+      "message": "It\u0027s not related to that, the volume sometimes suddenly gets too low and then too high, this is to normalise it according to the volume slider.",
+      "parentUuid": "3369541e_b3866be9",
+      "revId": "bd2605917b71501ed6d2afd4783071d6bd28fae7",
+      "serverId": "10b47cd0-ef45-46be-b9f3-8729e8c6cfd0"
     }
   ]
 }
