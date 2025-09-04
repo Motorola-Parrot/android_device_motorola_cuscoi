@@ -30,6 +30,12 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.qteeconnector@1.0-service_cuscoi.rc \
     init.oem.fingerprint2.sh
 
+# LiveDisplay
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay-service.sdm
+
+$(call soong_config_set_bool,livedisplay_sdm,enable_dm,false)
+
 # NFC
 TARGET_USES_ST_NFC := true
 
