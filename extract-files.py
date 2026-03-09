@@ -23,15 +23,11 @@ namespace_imports = [
     'device/motorola/sm7435-common',
     'vendor/motorola/sm7435-common',
     'hardware/motorola',
-    'hardware/qcom-caf/sm8450',
+    'hardware/qcom-caf/sm8450-6.6',
     'vendor/qcom/opensource/commonsys-intf/display',
 ]
 
 blob_fixups: blob_fixups_user_type = {
-    'vendor/bin/STFlashTool': blob_fixup()
-        .add_needed('libbase_shim.so'),
-    'vendor/lib64/libcamximageformatutils.so': blob_fixup()
-	.replace_needed('vendor.qti.hardware.display.config-V2-ndk_platform.so', 'vendor.qti.hardware.display.config-V2-ndk.so'),
     'vendor/lib64/libBSTSWAD.so': blob_fixup()
         .clear_symbol_version('AHardwareBuffer_allocate')
         .clear_symbol_version('AHardwareBuffer_describe')
@@ -39,6 +35,14 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('AHardwareBuffer_lockPlanes')
         .clear_symbol_version('AHardwareBuffer_release')
         .clear_symbol_version('AHardwareBuffer_unlock'),
+         (
+        'vendor/lib64/camera/components/com.qti.node.dewarp.so',
+        'vendor/lib64/hw/com.qti.chi.override.so',
+        'vendor/lib64/libcamximageformatutils.so',
+        'vendor/lib64/libchifeature2.so',
+        'vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so',
+    ): blob_fixup()
+        .replace_needed('android.hardware.graphics.allocator-V1-ndk.so', 'android.hardware.graphics.allocator-V2-ndk.so'),
 }
 
 extract_fns: extract_fns_user_type = {
