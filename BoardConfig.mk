@@ -23,9 +23,15 @@ include device/motorola/sm7435-common/BoardConfigCommon.mk
 TARGET_BOOTLOADER_BOARD_NAME := cuscoi
 
 # Manifest
-ODM_MANIFEST_SKUS += b d
+ODM_MANIFEST_SKUS += b be bn d de dn
 ODM_MANIFEST_B_FILES := $(DEVICE_PATH)/sku/manifest_b.xml $(COMMON_PATH)/configs/vintf/manifest_parrot_ss.xml
+ODM_MANIFEST_BE_FILES := $(DEVICE_PATH)/sku/manifest_be.xml
+ODM_MANIFEST_BN_FILES := $(DEVICE_PATH)/sku/manifest_bn.xml
 ODM_MANIFEST_D_FILES := $(DEVICE_PATH)/sku/manifest_d.xml
+ODM_MANIFEST_DE_FILES := $(DEVICE_PATH)/sku/manifest_de.xml
+ODM_MANIFEST_DN_FILES := $(DEVICE_PATH)/sku/manifest_dn.xml
+
+
 
 # Partitions
 BOARD_MOT_DP_GROUP_SIZE := 8313110528 # (BOARD_SUPER_PARTITION_SIZE - 4MB)
@@ -39,12 +45,12 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/properties/vendor.prop
 TARGET_RECOVERY_UI_MARGIN_HEIGHT := 90
 
 # Security
-BOOT_SECURITY_PATCH := 2025-05-01
+BOOT_SECURITY_PATCH := 2026-01-01
 VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
 # Verified Boot
-BOARD_AVB_ROLLBACK_INDEX := 13
-BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := 13
+BOARD_AVB_ROLLBACK_INDEX := 22
+BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := 22
 
 # inherit from the proprietary version
 include vendor/motorola/cuscoi/BoardConfigVendor.mk

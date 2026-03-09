@@ -1,11 +1,8 @@
 <!--
     Input:
-        device/moto/cuscoi/vintf/manifest_b.xml
+        device/moto/cuscoi/vintf/manifest_be.xml
 -->
 <manifest version="8.0" type="device">
-    <hal format="aidl" override="true">
-        <name>android.hardware.nfc</name>
-    </hal>
     <hal format="aidl" override="true">
         <name>android.hardware.radio.data</name>
         <version>3</version>
@@ -13,6 +10,7 @@
     </hal>
     <hal format="aidl" override="true">
         <name>android.hardware.secure_element</name>
+        <fqname>ISecureElement/SIM1</fqname>
     </hal>
     <hal format="aidl" override="true">
         <name>vendor.nxp.nxpnfc_aidl</name>
