@@ -60,6 +60,12 @@ PRODUCT_PACKAGES += \
 # Screen
 TARGET_SCREEN_DENSITY := 400
 
+# Touch
+PRODUCT_PACKAGES += \
+    vendor.lineage.touch-service.motorola
+
+$(call soong_config_set, MOTOROLA_TOUCH, HIGH_TOUCH_POLLING_PATH, /sys/class/touchscreen/primary/interpolation)
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
