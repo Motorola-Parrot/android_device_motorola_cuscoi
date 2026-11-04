@@ -32,6 +32,15 @@ PRODUCT_PACKAGES += \
 # NFC
 TARGET_USES_ST_NFC := true
 
+# Overlays
+PRODUCT_PACKAGES += \
+    FrameworksResDevice \
+    LineageSystemUIDevice \
+    SettingsResDevice \
+    SystemUIResDevice \
+    WifiResDevice \
+    LauncherOverlay
+
 # Screen
 TARGET_SCREEN_DENSITY := 400
 
