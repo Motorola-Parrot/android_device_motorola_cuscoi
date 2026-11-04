@@ -29,7 +29,11 @@ TARGET_SCREEN_WIDTH := 1080
 # Init
 PRODUCT_PACKAGES += \
     init.mmi.overlay.rc \
+    init.vendor.st21nfc.rc \
     init.oem.fingerprint2.sh
+
+# NFC
+TARGET_USES_ST_NFC := true
 
 # Screen
 TARGET_SCREEN_DENSITY := 400
