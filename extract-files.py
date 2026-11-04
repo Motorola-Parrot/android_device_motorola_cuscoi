@@ -15,8 +15,13 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
-    'device/motorola/sm6450-common',
     'vendor/motorola/sm6450-common',
+    'hardware/motorola',
+    'hardware/qcom-caf/sm8450-6.6',
+    'hardware/qcom-caf/wlan',
+    'vendor/qcom/opensource/commonsys/display',
+    'vendor/qcom/opensource/commonsys-intf/display',
+    'vendor/qcom/opensource/dataservices',
 ]
 
 blob_fixups: blob_fixups_user_type = {
