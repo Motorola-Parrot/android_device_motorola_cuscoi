@@ -27,6 +27,7 @@ TARGET_SCREEN_WIDTH := 1080
 PRODUCT_PACKAGES += \
     init.mmi.overlay.rc \
     init.vendor.st21nfc.rc \
+    vendor.qti.hardware.qteeconnector@1.0-service_cuscoi.rc \
     init.oem.fingerprint2.sh
 
 # NFC

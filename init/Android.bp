@@ -22,3 +22,10 @@ sh_binary {
     src: "init.oem.fingerprint2.sh",
     vendor: true,
 }
+
+prebuilt_etc {
+    name: "vendor.qti.hardware.qteeconnector@1.0-service_cuscoi.rc",
+    src: "vendor.qti.hardware.qteeconnector@1.0-service_cuscoi.rc",
+    sub_dir: "init",
+    vendor: true,
+}
