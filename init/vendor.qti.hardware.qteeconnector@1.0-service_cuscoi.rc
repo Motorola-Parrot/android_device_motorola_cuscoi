@@ -1,0 +1,22 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+# Match cuscoi stock: QTEEConnector is only used on ese_nq SKUs. On the other
+# SKUs the ODM VINTF manifest (manifest_<sku>.xml) disables
+# vendor.qti.hardware.qteeconnector, so an always-started service aborts in a
+# loop (addService fails with EX_ILLEGAL_ARGUMENT).
+# The file name must sort after vendor.qti.hardware.qteeconnector@1.0-service.rc
+# so that "override" applies.
+
+on boot && property:ro.vendor.hw.nfc=ese_nq
+    start qteeconnector-hal-1-0
+
+service qteeconnector-hal-1-0 /vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service
+    override
+    class early_hal
+    user system
+    group system
+    interface aidl vendor.qti.hardware.qteeconnector
+    disabled
