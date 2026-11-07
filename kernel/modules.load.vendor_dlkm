@@ -1,0 +1,14 @@
+qca_cld3_adrastea.ko
+aw87xxx_dlkm.ko
+aw882xx_dlkm.ko
+fs19xx_dlkm.ko
+stm_nfc_i2c.ko
+touchscreen_mmi.ko
+goodix_brl_mmi.ko
+focaltech_v3_4.ko
+sx937x_sar.ko
+awinic_sar.ko
+wlan_antenna.ko
+wl2866d.ko
+goodix_fod_mmi.ko
+anc_fps_mmi.ko
