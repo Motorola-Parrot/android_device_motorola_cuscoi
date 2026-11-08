@@ -31,6 +31,12 @@ namespace_imports = [
 ]
 
 blob_fixups: blob_fixups_user_type = {
+    ('vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-goodixservice',
+        'vendor/bin/hw/android.hardware.biometrics.fingerprint-service-jv', 'vendor/lib64/libgf_hal.so'): blob_fixup()
+        .binary_regex_replace(b'(?<=\x00)/default\x00', b'/wrapper\x00'),
+    'vendor/etc/vintf/manifest/manifest_IMoto_Fingerprint.xml': blob_fixup()
+        .regex_replace('IFingerprint/default', 'IFingerprint/wrapper')
+        .regex_replace('<instance>default</instance>', '<instance>wrapper</instance>'),
     'vendor/lib64/libBSTSWAD.so': blob_fixup()
         .clear_symbol_version('AHardwareBuffer_allocate')
         .clear_symbol_version('AHardwareBuffer_describe')
